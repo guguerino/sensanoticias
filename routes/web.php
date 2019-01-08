@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware'=> 'web'],function(){
+});
+//noticia Routes
+Route::group(['middleware'=> 'web'],function(){
+  Route::resource('noticia','\App\Http\Controllers\NoticiaController');
+  Route::post('noticia/{id}/update','\App\Http\Controllers\NoticiaController@update');
+  Route::get('noticia/{id}/delete','\App\Http\Controllers\NoticiaController@destroy');
+  Route::get('noticia/{id}/deleteMsg','\App\Http\Controllers\NoticiaController@DeleteMsg');
+});

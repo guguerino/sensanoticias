@@ -30,9 +30,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info semBordas">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand logo" href="{{ url('/') }}">
                     <i>Sensa</i> <b>Noticias</b>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -81,7 +81,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

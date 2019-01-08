@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Ultimas publicações:</div>
+<div class="fluid-container">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-12">
+            <div class="card" style="border: 0px !important;">
+                <div class="card-header bg-info text-light semBordas">Ultimas publicações:</div>
                 <br>
-                <div class="card-body">
-                        <div class="alert alert-danger" role="alert">
-                            Sem publicações recentes..
-                        </div>
+                <div class="card-body container">
+                    <div class="alert alert-danger" role="alert">
+                        Sem publicações recentes..
+                    </div>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
     <br>
 
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- Bloco superior home -->
             <ins class="adsbygoogle"
@@ -33,13 +33,13 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Crie sua própria publicação:</div>
-                <div class="card-body">
+        <div class="col-md-12">
+            <div class="card semBordas">
+                <div class="card-header bg-info text-center text-light semBordas">Crie sua própria publicação:</div>
+                <div class="card-body container">
                         <!-- Create the editor container -->
                         <div id="editor">
-                            <p>Crie sua própria publicação!</p>
+                            <p>Conteudo aqui.</p>
                         </div>
                 </div>
             </div>
