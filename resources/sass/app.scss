@@ -8,8 +8,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Theme
+// Theme    
 @import 'bootstraptheme';
+@import 'social';
 
 .semBordas{
     border: 0px !important;
@@ -18,3 +19,4 @@
 .logo{
     font-size: 160%;
 }
+

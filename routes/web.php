@@ -12,16 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('principal');
 });
+
+Route::get('/home', function () {
+  return view('principal');
+})->name('home');;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::group(['middleware'=> 'web'],function(){
-});
-//noticia Routes
 Route::group(['middleware'=> 'web'],function(){
   Route::resource('noticia','\App\Http\Controllers\NoticiaController');
   Route::post('noticia/{id}/update','\App\Http\Controllers\NoticiaController@update');

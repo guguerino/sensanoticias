@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Noticia;
 use Amranidev\Ajaxis\Ajaxis;
 use URL;
-
+use Carbon\Carbon;
 /**
  * Class NoticiaController.
  *
@@ -58,23 +58,11 @@ class NoticiaController extends Controller
         $noticia->Conteudo = $request->Conteudo;
 
         
-        $noticia->Noticas = $request->Noticas;
-
-        
+        $noticia->Noticas = Carbon::now();
         
         $noticia->save();
 
-        $pusher = App::make('pusher');
-
-        //default pusher notification.
-        //by default channel=test-channel,event=test-event
-        //Here is a pusher notification example when you create a new resource in storage.
-        //you can modify anything you want or use it wherever.
-        $pusher->trigger('test-channel',
-                         'test-event',
-                        ['message' => 'A new noticia has been created !!']);
-
-        return redirect('noticia');
+        return redirect('noticia/'.$noticia->id);
     }
 
     /**
