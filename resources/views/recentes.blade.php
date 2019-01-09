@@ -8,10 +8,11 @@
                     <div class="col-md-4">
                         <div class="card bg-primary mb-1 text-white" style="min-height: 5rem;">
                             <div class="card-header">
-                                    {{ str_limit($publicacao->Titulo, $limit = 23, $end = '...') }}
+                                    {{ str_limit($publicacao->Titulo, $limit = 23, $end = '...') }}<br>
+                                    <small>{{ $publicacao->Noticas }}</small>
                             </div>
                             <div class="card-body">
-                                <button type="button" class="btn bg-success btn-sm">Visualizar!</button>
+                                <a href="{!! route('noticia.show', ['noticia' => $publicacao->id]) !!}" class="btn bg-success btn-sm">Visualizar!</a>
                             </div>
                         </div>
                     </div>
